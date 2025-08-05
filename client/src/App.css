@@ -1,0 +1,420 @@
+#root {
+  /* Rimuovi max-width, margin auto, padding e text-align center */
+  width: 100vw;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+}
+
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+}
+
+/* CSS for custom components */
+:root {
+  --gradient-primary: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  --gradient-success: linear-gradient(135deg, #28a745, #20c997);
+  --gradient-danger: linear-gradient(135deg, #dc3545, #fd7e14);
+  --gradient-background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+  --gradient-card: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
+  
+  --shadow-sm: 0 2px 8px rgba(0,0,0,0.1);
+  --shadow-md: 0 4px 15px rgba(0,0,0,0.15);
+  --shadow-lg: 0 8px 25px rgba(0,0,0,0.2);
+  --shadow-primary: 0 4px 15px rgba(102, 126, 234, 0.3);
+  --shadow-success: 0 4px 15px rgba(40, 167, 69, 0.3);
+  
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 20px;
+  --radius-pill: 25px;
+  
+  --transition-standard: all 0.3s ease;
+  --transition-fast: all 0.2s ease;
+}
+
+/* CSS for custom page */
+.custom-page {
+  background: var(--gradient-background);
+  min-height: 100vh;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+
+/* CSS for custom cards */
+.custom-card {
+  background: white;
+  border: none;
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-md);
+  transition: var(--transition-standard);
+  overflow: hidden;
+}
+
+.custom-card:hover {
+  box-shadow: var(--shadow-lg);
+}
+
+.custom-card-gradient {
+  background: var(--gradient-primary);
+  color: white;
+  border: none;
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-md);
+  transition: var(--transition-standard);
+}
+
+.custom-card-success {
+  border: 2px solid #28a745;
+  box-shadow: 0 4px 15px rgba(40, 167, 69, 0.2);
+}
+
+.custom-card-success:hover {
+  box-shadow: 0 8px 25px rgba(40, 167, 69, 0.3);
+}
+
+.custom-card-danger {
+  border: 2px solid #dc3545;
+  box-shadow: 0 4px 15px rgba(220, 53, 69, 0.2);
+}
+
+.custom-card-danger:hover {
+  box-shadow: 0 8px 25px rgba(220, 53, 69, 0.3);
+}
+
+.custom-card .card-header {
+  background: var(--gradient-primary);
+  color: white;
+  border: none;
+  padding: 1.5rem;
+  font-weight: 600;
+}
+
+/* CSS for custom buttons */
+.custom-btn {
+  border: none;
+  border-radius: var(--radius-pill);
+  font-weight: 600;
+  padding: 0.75rem 2rem;
+  transition: var(--transition-standard);
+  box-shadow: var(--shadow-sm);
+}
+
+.custom-btn-primary {
+  background: var(--gradient-primary);
+  color: white;
+}
+
+.custom-btn-primary:hover {
+  box-shadow: var(--shadow-primary);
+  color: white;
+}
+
+.custom-btn-success {
+  background: var(--gradient-success);
+  color: white;
+}
+
+.custom-btn-success:hover {
+  transform: translateY(-2px);
+  color: white;
+}
+
+.custom-btn-outline {
+  background: transparent;
+  border: 2px solid rgba(255,255,255,0.3);
+  color: white;
+}
+
+.custom-btn-outline:hover {
+  background: rgba(255,255,255,0.1);
+  color: white;
+}
+
+.custom-btn-lg {
+  padding: 1rem 3rem;
+  font-size: 1.1rem;
+}
+
+.custom-btn:disabled {
+  background: #e9ecef;
+  color: #6c757d;
+  cursor: not-allowed;
+  box-shadow: none;
+}
+
+/* CSS for custom position buttons */
+.position-button {
+  background: linear-gradient(135deg, #e9ecef 0%, #f8f9fa 100%); /* Grigio chiaro visibile */
+  color: #495057;
+  border: 2px solid #dee2e6; /* Bordo per definire meglio */
+  border-radius: var(--radius-md);
+  padding: 0.75rem 1.25rem;
+  font-size: 0.95rem;
+  font-weight: 600;
+  transition: var(--transition-standard);
+  box-shadow: var(--shadow-sm);
+  width: 100%;
+}
+
+.position-button:hover {
+  box-shadow: var(--shadow-md);
+  color: #495057;
+  background: linear-gradient(135deg, #dee2e6 0%, #e9ecef 100%); /* Più scuro al hover */
+  border-color: #adb5bd;
+}
+
+.position-button.selected {
+  background: var(--gradient-success);
+  color: white;
+  box-shadow: var(--shadow-success);
+  border-color: #28a745;
+}
+
+.position-button.selected:hover {
+  background: var(--gradient-success);
+  color: white;
+}
+
+/* CSS for custom header */
+.custom-header {
+  background: var(--gradient-primary);
+  box-shadow: var(--shadow-md);
+  position: sticky;
+  top: 0;
+  z-index: 1020;
+}
+
+.custom-link {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: white;
+  transition: var(--transition-standard);
+}
+
+.custom-link:hover {
+  color: white;
+}
+
+.custom-icon {
+  width: 50px;
+  height: 50px;
+  background: rgba(255,255,255,0.2);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  margin-right: 1rem;
+  transition: var(--transition-standard);
+}
+
+.custom-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.custom-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  line-height: 1.2;
+  margin: 0;
+}
+
+.custom-subtitle {
+  font-size: 0.8rem;
+  opacity: 0.8;
+  margin: 0;
+}
+
+/* CSS for custom badges */
+.custom-badge {
+  padding: 0.5rem 1rem;
+  border-radius: var(--radius-pill);
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+.custom-badge-primary {
+  background: var(--gradient-primary);
+  color: white;
+}
+
+.custom-badge-success {
+  background: var(--gradient-success);
+  color: white;
+}
+.custom-badge-danger {
+  background: var(--gradient-danger);
+  color: white;
+}
+
+
+/* CSS for custom alerts */
+.custom-alert {
+  border: none;
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-sm);
+  padding: 1.25rem;
+}
+
+.custom-alert-success {
+  background: linear-gradient(135deg, rgba(40, 167, 69, 0.1), rgba(32, 201, 151, 0.1));
+  border-left: 4px solid #28a745;
+  color: #155724;
+}
+
+.custom-alert-danger {
+  background: linear-gradient(135deg, rgba(220, 53, 69, 0.1), rgba(253, 126, 20, 0.1));
+  border-left: 4px solid #dc3545;
+  color: #721c24;
+}
+
+/* CSS for custom modal */
+.custom-modal .modal-content {
+  border: none;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-lg);
+  overflow: hidden;
+}
+
+.custom-modal .modal-header {
+  border: none;
+  padding: 2rem;
+  background: var(--gradient-primary);
+  color: white;
+}
+
+.custom-modal.success .modal-header {
+  border: none;
+  padding: 2rem;
+  background: var(--gradient-success);
+  color: white;
+}
+
+.custom-modal.danger .modal-header {
+  border: none;
+  padding: 2rem;
+  background: var(--gradient-danger);
+  color: white;
+}
+
+.custom-modal .modal-body {
+  padding: 2rem;
+}
+
+/* CSS for custom loading */
+.custom-loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 50vh;
+  flex-direction: column;
+}
+
+.custom-spinner {
+  width: 3rem;
+  height: 3rem;
+  border: 3px solid rgba(102, 126, 234, 0.3);
+  border-top: 3px solid #667eea;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* CSS for custom progress bar */
+.custom-progress {
+  height: 8px;
+  border-radius: var(--radius-sm);
+  background: rgba(255,255,255,0.2);
+  overflow: hidden;
+}
+
+.custom-progress-bar {
+  border-radius: var(--radius-sm);
+  transition: var(--transition-standard);
+}
+
+/* CSS for custom accordion */
+.custom-accordion {
+  background: white;
+  padding: 1rem;
+}
+
+.custom-accordion .accordion-item {
+  border: none;
+  border-radius: var(--radius-md);
+  margin-bottom: 1rem;
+  box-shadow: var(--shadow-sm);
+  overflow: hidden;
+}
+
+.custom-accordion .accordion-header button {
+  background: var(--gradient-primary);
+  color: white;
+  border: none;
+  padding: 1rem 1.5rem;
+  font-weight: 600;
+  transition: var(--transition-standard);
+}
+
+.custom-accordion .accordion-header button:hover {
+  background: var(--gradient-primary);
+  box-shadow: var(--shadow-md);
+}
+
+.custom-accordion .accordion-header button:not(.collapsed) {
+  background: var(--gradient-primary);
+  box-shadow: none;
+}
+
+.custom-accordion .accordion-body {
+  background: white;
+  padding: 1.5rem;
+  border-top: 1px solid rgba(0,0,0,0.1);
+}
+
+.custom-accordion-success .accordion-header button {
+  background: var(--gradient-success);
+}
+
+.custom-accordion-danger .accordion-header button {
+  background: var(--gradient-danger);
+}
